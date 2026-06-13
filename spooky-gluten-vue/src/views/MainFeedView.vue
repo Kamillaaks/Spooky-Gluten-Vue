@@ -1,28 +1,12 @@
 <script setup lang="ts">
 import {ref} from 'vue'
+import {model} from '../data/model'
 
 const search = ref('')
 
 const isAdmin = true
 
-const places = [
-    {
-        id: 1,
-        title: 'Glutenfri Café',
-        image: 'https://picsum.photos/200',
-        city: 'Tromsø',
-        address: 'Storgata 1',
-        rateFood: 4,
-    },
-    {
-        id: 2,
-        title: 'Pizza plass',
-        image: 'https://picsum.photos/201',
-        city: 'Bodø',
-        address: 'Sentrumsgata 5',
-        rateFood: 5,
-    },
-]
+const places = model.data.placesList
 
 function goToAddPlace() {
     console.log('Gå til legg til sted')
